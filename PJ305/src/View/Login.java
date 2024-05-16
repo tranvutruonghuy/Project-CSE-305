@@ -7,14 +7,18 @@ import javax.swing.ImageIcon;
 
 public class Login extends javax.swing.JFrame {
 
-    
+    /**
+     * Creates new form Login
+     */
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
         ScaleImage();
         
+
     }
-    public void ScaleImage(){
+
+    public void ScaleImage() {
         ImageIcon icon = new ImageIcon("src//Images//Bus1.jpg");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_SMOOTH);
@@ -26,6 +30,8 @@ public class Login extends javax.swing.JFrame {
         Image imgScale1 = img1.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
         hiddenButton.setIcon(scaledIcon1);
+        // 
+
     }
 
     /**
@@ -75,13 +81,14 @@ public class Login extends javax.swing.JFrame {
         loginButton.setText("Login");
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jLabel2.setText("I don't have an account");
+        jLabel2.setText("Don't have an account?");
 
         signupButton.setBackground(new java.awt.Color(0, 102, 0));
-        signupButton.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        signupButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         signupButton.setForeground(new java.awt.Color(255, 255, 255));
         signupButton.setText("Sign up");
 
+        hiddenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hide.png"))); // NOI18N
         hiddenButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 hiddenButtonMousePressed(evt);
@@ -89,6 +96,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         passwordTF.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        passwordTF.setEchoChar('\u25cf');
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -100,6 +108,9 @@ public class Login extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(98, 98, 98)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -113,14 +124,12 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(passwordTF))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(hiddenButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(154, 154, 154)
-                        .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(917, Short.MAX_VALUE))
+                        .addComponent(hiddenButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(1217, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(13, 13, 13)
@@ -130,9 +139,11 @@ public class Login extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addComponent(passwordLabel)
                 .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(hiddenButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(passwordTF, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(passwordTF, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(hiddenButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(50, 50, 50)
                 .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
@@ -140,7 +151,6 @@ public class Login extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(signupButton))
                 .addGap(35, 35, 35))
-            .addComponent(label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -149,7 +159,7 @@ public class Login extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 38, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,9 +170,25 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>                        
-
+    private boolean check = false;
     private void hiddenButtonMousePressed(java.awt.event.MouseEvent evt) {                                          
-        passwordTF.setEchoChar((char)0);
+        if (!check) {
+            passwordTF.setEchoChar((char) 0);
+            ImageIcon icon2 = new ImageIcon("src//Images//show.png");
+            Image img2 = icon2.getImage();
+            Image imgScale2 = img2.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
+            ImageIcon scaledIcon2 = new ImageIcon(imgScale2);
+            hiddenButton.setIcon(scaledIcon2);
+            check = true;
+        } else {
+            check = false;
+            passwordTF.setEchoChar('\u25cf');
+            ImageIcon icon1 = new ImageIcon("src//Images//hide.png");
+            Image img1 = icon1.getImage();
+            Image imgScale1 = img1.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
+            ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
+            hiddenButton.setIcon(scaledIcon1);
+        }
     }                                         
 
     /**
