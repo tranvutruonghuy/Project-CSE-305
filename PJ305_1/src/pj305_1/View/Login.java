@@ -53,7 +53,7 @@ public class Login extends javax.swing.JFrame {
         passwordLabel = new javax.swing.JLabel();
         usernameTF1 = new javax.swing.JTextField();
         loginButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        donthaveLabel = new javax.swing.JLabel();
         signupButton = new javax.swing.JButton();
         hiddenButton = new javax.swing.JLabel();
         passwordTF = new javax.swing.JPasswordField();
@@ -83,8 +83,8 @@ public class Login extends javax.swing.JFrame {
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
-        jLabel2.setText("Don't have an account?");
+        donthaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        donthaveLabel.setText("Don't have an account?");
 
         signupButton.setBackground(new java.awt.Color(0, 102, 102));
         signupButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -99,6 +99,7 @@ public class Login extends javax.swing.JFrame {
         });
 
         passwordTF.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
+        passwordTF.setEchoChar('\u25cf');
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -119,7 +120,7 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(emailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(30, 30, 30)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(donthaveLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(signupButton))
                             .addComponent(usernameTF1)
@@ -148,7 +149,7 @@ public class Login extends javax.swing.JFrame {
                 .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(donthaveLabel)
                     .addComponent(signupButton))
                 .addGap(35, 35, 35))
         );
@@ -183,7 +184,7 @@ public class Login extends javax.swing.JFrame {
         } else {
             check = false;
             passwordTF.setEchoChar('\u25cf');
-            ImageIcon icon1 = new ImageIcon("PJ305_1//src//Images//hide.png");
+            ImageIcon icon1 = new ImageIcon("src//Images//hide.png");
             Image img1 = icon1.getImage();
             Image imgScale1 = img1.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
             ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
@@ -227,10 +228,10 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel donthaveLabel;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JLabel hiddenButton;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel label;
     private javax.swing.JButton loginButton;
