@@ -1,4 +1,9 @@
+package utils;
+
 import java.util.ArrayList;
+import java.util.List;
+
+import model.Bus;
 
 public class BusService {
     private static List<Bus> busList = new ArrayList<>();
