@@ -6,6 +6,7 @@ package pj305_1.View;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 
 public class Register extends javax.swing.JFrame {
@@ -42,15 +43,15 @@ public class Register extends javax.swing.JFrame {
         registerLabel = new javax.swing.JLabel();
         nameLabel = new javax.swing.JLabel();
         userNameLabel = new javax.swing.JLabel();
-        passwordTF = new javax.swing.JTextField();
         firstNameTF2 = new javax.swing.JTextField();
         passwordLB = new javax.swing.JLabel();
-        lastNameTF2 = new javax.swing.JTextField();
+        userNameTF = new javax.swing.JTextField();
         passwordLB1 = new javax.swing.JLabel();
-        passwordTF1 = new javax.swing.JTextField();
         imageBus = new javax.swing.JLabel();
         registerButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        confirmPassTF = new javax.swing.JPasswordField();
+        passwordTF1 = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Register");
@@ -74,13 +75,6 @@ public class Register extends javax.swing.JFrame {
         userNameLabel.setText("User name");
         bg.add(userNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 150, 390, -1));
 
-        passwordTF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordTFActionPerformed(evt);
-            }
-        });
-        bg.add(passwordTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 365, 45));
-
         firstNameTF2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 firstNameTF2ActionPerformed(evt);
@@ -92,23 +86,16 @@ public class Register extends javax.swing.JFrame {
         passwordLB.setText("Password");
         bg.add(passwordLB, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 73, -1));
 
-        lastNameTF2.addActionListener(new java.awt.event.ActionListener() {
+        userNameTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lastNameTF2ActionPerformed(evt);
+                userNameTFActionPerformed(evt);
             }
         });
-        bg.add(lastNameTF2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 365, 45));
+        bg.add(userNameTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 365, 45));
 
         passwordLB1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         passwordLB1.setText("Confirm password");
         bg.add(passwordLB1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 290, -1, -1));
-
-        passwordTF1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordTF1ActionPerformed(evt);
-            }
-        });
-        bg.add(passwordTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 365, 45));
 
         imageBus.setPreferredSize(new java.awt.Dimension(376, 604));
         bg.add(imageBus, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 500));
@@ -117,6 +104,11 @@ public class Register extends javax.swing.JFrame {
         registerButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         registerButton.setForeground(new java.awt.Color(255, 255, 255));
         registerButton.setText("Register");
+        registerButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                registerButtonActionPerformed(evt);
+            }
+        });
         bg.add(registerButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 370, 100, 40));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -129,33 +121,35 @@ public class Register extends javax.swing.JFrame {
         });
         bg.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 450, -1, -1));
 
+        confirmPassTF.setPreferredSize(new java.awt.Dimension(64, 22));
+        bg.add(confirmPassTF, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 310, 365, 45));
+        bg.add(passwordTF1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 240, 365, 45));
+
         getContentPane().add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 500));
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void passwordTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTFActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordTFActionPerformed
-
     private void firstNameTF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameTF2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_firstNameTF2ActionPerformed
 
-    private void lastNameTF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastNameTF2ActionPerformed
+    private void userNameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_lastNameTF2ActionPerformed
-
-    private void passwordTF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTF1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passwordTF1ActionPerformed
+    }//GEN-LAST:event_userNameTFActionPerformed
 
     private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
         this.setVisible(false);
         Login login = new Login();
         login.setVisible(true);
     }//GEN-LAST:event_jLabel1MousePressed
+
+    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
+        if (firstNameTF2.getText().length() == 0 ||userNameTF.getText().length() == 0 || passwordTF1.getText().length() == 0 || confirmPassTF.getText().length() == 0){
+            JOptionPane.showMessageDialog(rootPane, "NO");
+        }
+    }//GEN-LAST:event_registerButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,17 +188,17 @@ public class Register extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bg;
+    private javax.swing.JPasswordField confirmPassTF;
     private javax.swing.JTextField firstNameTF2;
     private javax.swing.JLabel imageBus;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField lastNameTF2;
     private javax.swing.JLabel nameLabel;
     private javax.swing.JLabel passwordLB;
     private javax.swing.JLabel passwordLB1;
-    private javax.swing.JTextField passwordTF;
-    private javax.swing.JTextField passwordTF1;
+    private javax.swing.JPasswordField passwordTF1;
     private javax.swing.JButton registerButton;
     private javax.swing.JLabel registerLabel;
     private javax.swing.JLabel userNameLabel;
+    private javax.swing.JTextField userNameTF;
     // End of variables declaration//GEN-END:variables
 }

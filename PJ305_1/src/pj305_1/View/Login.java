@@ -43,7 +43,7 @@ public class Login extends javax.swing.JFrame {
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
@@ -175,9 +175,9 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>                        
+    }// </editor-fold>//GEN-END:initComponents
     private boolean check = false;
-    private void hiddenButtonMousePressed(java.awt.event.MouseEvent evt) {                                          
+    private void hiddenButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hiddenButtonMousePressed
         if (!check) {
             passwordTF.setEchoChar((char) 0);
             ImageIcon icon2 = new ImageIcon("PJ305_1//src//Images//show.png");
@@ -195,13 +195,13 @@ public class Login extends javax.swing.JFrame {
             ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
             hiddenButton.setIcon(scaledIcon1);
         }
-    }                                         
+    }//GEN-LAST:event_hiddenButtonMousePressed
 
-    private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
+    private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupButtonActionPerformed
         Register register = new Register();
         this.setVisible(false);
         register.setVisible(true);
-    }                                            
+    }//GEN-LAST:event_signupButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,7 +238,7 @@ public class Login extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify                     
+    // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel donthaveLabel;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JLabel hiddenButton;
@@ -250,5 +250,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField passwordTF;
     private javax.swing.JButton signupButton;
     private javax.swing.JTextField usernameTF1;
-    // End of variables declaration                   
+    // End of variables declaration//GEN-END:variables
 }
