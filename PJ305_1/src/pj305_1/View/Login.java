@@ -26,13 +26,13 @@ public class Login extends javax.swing.JFrame {
     }
 
     public void ScaleImage() {
-        ImageIcon icon = new ImageIcon("src//Images//Bus1.jpg");
+        ImageIcon icon = new ImageIcon("PJ305_1//src//Images//Bus1.jpg");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         label.setIcon(scaledIcon);
         //
-        ImageIcon icon1 = new ImageIcon("src//Images//hide.png");
+        ImageIcon icon1 = new ImageIcon("PJ305_1//src//Images//hide.png");
         Image img1 = icon1.getImage();
         Image imgScale1 = img1.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
@@ -174,7 +174,7 @@ public class Login extends javax.swing.JFrame {
     private void hiddenButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hiddenButtonMousePressed
         if (!check) {
             passwordTF.setEchoChar((char) 0);
-            ImageIcon icon2 = new ImageIcon("src//Images//show.png");
+            ImageIcon icon2 = new ImageIcon("PJ305_1//src//Images//show.png");
             Image img2 = icon2.getImage();
             Image imgScale2 = img2.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
             ImageIcon scaledIcon2 = new ImageIcon(imgScale2);
@@ -183,7 +183,7 @@ public class Login extends javax.swing.JFrame {
         } else {
             check = false;
             passwordTF.setEchoChar('\u25cf');
-            ImageIcon icon1 = new ImageIcon("src//Images//hide.png");
+            ImageIcon icon1 = new ImageIcon("PJ305_1//src//Images//hide.png");
             Image img1 = icon1.getImage();
             Image imgScale1 = img1.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
             ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
