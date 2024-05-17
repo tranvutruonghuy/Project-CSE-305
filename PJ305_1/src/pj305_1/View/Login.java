@@ -43,7 +43,7 @@ public class Login extends javax.swing.JFrame {
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
@@ -90,6 +90,11 @@ public class Login extends javax.swing.JFrame {
         signupButton.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         signupButton.setForeground(new java.awt.Color(255, 255, 255));
         signupButton.setText("Sign up");
+        signupButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signupButtonActionPerformed(evt);
+            }
+        });
 
         hiddenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hide.png"))); // NOI18N
         hiddenButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -170,9 +175,9 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
     private boolean check = false;
-    private void hiddenButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hiddenButtonMousePressed
+    private void hiddenButtonMousePressed(java.awt.event.MouseEvent evt) {                                          
         if (!check) {
             passwordTF.setEchoChar((char) 0);
             ImageIcon icon2 = new ImageIcon("PJ305_1//src//Images//show.png");
@@ -190,7 +195,13 @@ public class Login extends javax.swing.JFrame {
             ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
             hiddenButton.setIcon(scaledIcon1);
         }
-    }//GEN-LAST:event_hiddenButtonMousePressed
+    }                                         
+
+    private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        Register register = new Register();
+        this.setVisible(false);
+        register.setVisible(true);
+    }                                            
 
     /**
      * @param args the command line arguments
@@ -227,7 +238,7 @@ public class Login extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JLabel donthaveLabel;
     private javax.swing.JLabel emailLabel;
     private javax.swing.JLabel hiddenButton;
@@ -239,5 +250,5 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField passwordTF;
     private javax.swing.JButton signupButton;
     private javax.swing.JTextField usernameTF1;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
