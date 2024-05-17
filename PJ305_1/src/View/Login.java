@@ -1,4 +1,4 @@
-package pj305_1.View;
+package View;
 
 
 import java.awt.Image;
