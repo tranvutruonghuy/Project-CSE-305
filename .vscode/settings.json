@@ -1,0 +1,11 @@
+{
+    "java.project.sourcePaths": [
+        "PJ305_1/src",
+        "PJ305_1",
+        ""
+    ],
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "PJ305_1/lib/AbsoluteLayout-RELEASE210.jar"
+    ]
+}
