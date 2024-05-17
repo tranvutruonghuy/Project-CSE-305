@@ -184,7 +184,7 @@ public class Login extends javax.swing.JFrame {
         } else {
             check = false;
             passwordTF.setEchoChar('\u25cf');
-            ImageIcon icon1 = new ImageIcon("src//Images//hide.png");
+            ImageIcon icon1 = new ImageIcon("PJ305_1//src//Images//hide.png");
             Image img1 = icon1.getImage();
             Image imgScale1 = img1.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
             ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
