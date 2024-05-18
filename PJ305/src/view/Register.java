@@ -2,40 +2,35 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package PJ305.src.view;
+package View;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
+
 public class Register extends javax.swing.JFrame {
 
+   
     public Register() {
         initComponents();
         this.setLocationRelativeTo(null);
-        ScaleImage();
+        initialScaleImage();
     }
-
-    public void ScaleImage() {
+    
+    public void initialScaleImage() {
         ImageIcon icon = new ImageIcon("PJ305_1//src//Images//Bus1.jpg");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(imageBus.getWidth(), imageBus.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         imageBus.setIcon(scaledIcon);
-        //
-        // ImageIcon icon1 = new ImageIcon("PJ305_1//src//Images//hide.png");
-        // Image img1 = icon1.getImage();
-        // Image imgScale1 = img1.getScaledInstance(hiddenButton.getWidth(),
-        // hiddenButton.getHeight(), Image.SCALE_SMOOTH);
-        // ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
-        // hiddenButton.setIcon(scaledIcon1);
-        //
+
 
     }
 
+    
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         bg = new javax.swing.JPanel();
@@ -130,39 +125,34 @@ public class Register extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void firstNameTF2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_firstNameTF2ActionPerformed
+    private void firstNameTF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstNameTF2ActionPerformed
         // TODO add your handling code here:
-    }// GEN-LAST:event_firstNameTF2ActionPerformed
+    }//GEN-LAST:event_firstNameTF2ActionPerformed
 
-    private void userNameTFActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_userNameTFActionPerformed
+    private void userNameTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameTFActionPerformed
         // TODO add your handling code here:
-    }// GEN-LAST:event_userNameTFActionPerformed
+    }//GEN-LAST:event_userNameTFActionPerformed
 
-    private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {// GEN-FIRST:event_jLabel1MousePressed
+    private void jLabel1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MousePressed
         this.setVisible(false);
         Login login = new Login();
         login.setVisible(true);
-    }// GEN-LAST:event_jLabel1MousePressed
+    }//GEN-LAST:event_jLabel1MousePressed
 
-    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_registerButtonActionPerformed
-        if (firstNameTF2.getText().length() == 0 || userNameTF.getText().length() == 0
-                || passwordTF1.getText().length() == 0 || confirmPassTF.getText().length() == 0) {
-            JOptionPane.showMessageDialog(rootPane, "NO");
+    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
+        if (firstNameTF2.getText().length() == 0 ||userNameTF.getText().length() == 0 || passwordTF1.getText().length() == 0 || confirmPassTF.getText().length() == 0){
+            JOptionPane.showMessageDialog(rootPane, "Please enter full information!", "Can't create account!", JOptionPane.ERROR_MESSAGE);
         }
-    }// GEN-LAST:event_registerButtonActionPerformed
+    }//GEN-LAST:event_registerButtonActionPerformed
 
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
-        // <editor-fold defaultstate="collapsed" desc=" Look and feel setting code
-        // (optional) ">
-        /*
-         * If Nimbus (introduced in Java SE 6) is not available, stay with the default
-         * look and feel.
-         * For details see
-         * http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -180,7 +170,7 @@ public class Register extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Register.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        // </editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
