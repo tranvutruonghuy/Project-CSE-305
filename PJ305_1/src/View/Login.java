@@ -34,9 +34,9 @@ public class Login extends javax.swing.JFrame {
         //
         ImageIcon icon1 = new ImageIcon("PJ305_1//src//Images//hide.png");
         Image img1 = icon1.getImage();
-        Image imgScale1 = img1.getScaledInstance(userLabel.getWidth(), userLabel.getHeight(), Image.SCALE_SMOOTH);
+        Image imgScale1 = img1.getScaledInstance(hiddenButton1.getWidth(), hiddenButton1.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
-        userLabel.setIcon(scaledIcon1);
+        hiddenButton1.setIcon(scaledIcon1);
         //
         ImageIcon icon3 = new ImageIcon("PJ305_1//src//Images//user.png");
         Image img3 = icon3.getImage();
@@ -198,7 +198,25 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void hiddenButton1MousePressed(java.awt.event.MouseEvent evt) {                                           
-        // TODO add your handling code here:
+        if (!check) {
+                        passwordTF.setEchoChar((char) 0);
+                        ImageIcon icon2 = new ImageIcon("PJ305_1//src//Images//show.png");
+                        Image img2 = icon2.getImage();
+                        Image imgScale2 = img2.getScaledInstance(hiddenButton1.getWidth(), hiddenButton1.getHeight(),
+                                        Image.SCALE_SMOOTH);
+                        ImageIcon scaledIcon2 = new ImageIcon(imgScale2);
+                        hiddenButton1.setIcon(scaledIcon2);
+                        check = true;
+                } else {
+                        check = false;
+                        passwordTF.setEchoChar('\u25cf');
+                        ImageIcon icon1 = new ImageIcon("PJ305_1//src//Images//hide.png");
+                        Image img1 = icon1.getImage();
+                        Image imgScale1 = img1.getScaledInstance(hiddenButton1.getWidth(), hiddenButton1.getHeight(),
+                                        Image.SCALE_SMOOTH);
+                        ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
+                        hiddenButton1.setIcon(scaledIcon1);
+                }
     }                                          
 
         private boolean check = false;
