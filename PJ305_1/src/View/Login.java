@@ -20,12 +20,12 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
-        ScaleImage();
+        initialScaleImage();
         
 
     }
 
-    public void ScaleImage() {
+    public void initialScaleImage() {
         ImageIcon icon = new ImageIcon("PJ305_1//src//Images//Bus1.jpg");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_SMOOTH);
@@ -37,13 +37,18 @@ public class Login extends javax.swing.JFrame {
         Image imgScale1 = img1.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
         hiddenButton.setIcon(scaledIcon1);
-        // 
+        //
+        ImageIcon icon3 = new ImageIcon("PJ305_1//src//Images//user.png");
+        Image img3 = icon3.getImage();
+        Image imgScale3 = img3.getScaledInstance(userLabel.getWidth(), userLabel.getHeight(), Image.SCALE_SMOOTH);
+        ImageIcon scaledIcon3 = new ImageIcon(imgScale3);
+        userLabel.setIcon(scaledIcon3);
 
     }
 
     
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel2 = new javax.swing.JPanel();
@@ -57,6 +62,8 @@ public class Login extends javax.swing.JFrame {
         signupButton = new javax.swing.JButton();
         hiddenButton = new javax.swing.JLabel();
         passwordTF = new javax.swing.JPasswordField();
+        userLabel = new javax.swing.JLabel();
+        helloLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login");
@@ -83,7 +90,7 @@ public class Login extends javax.swing.JFrame {
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
 
-        donthaveLabel.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        donthaveLabel.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         donthaveLabel.setText("Don't have an account?");
 
         signupButton.setBackground(new java.awt.Color(0, 102, 102));
@@ -96,7 +103,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        hiddenButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/hide.png"))); // NOI18N
+        hiddenButton.setPreferredSize(new java.awt.Dimension(45, 45));
         hiddenButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 hiddenButtonMousePressed(evt);
@@ -106,6 +113,12 @@ public class Login extends javax.swing.JFrame {
         passwordTF.setFont(new java.awt.Font("Segoe UI", 3, 14)); // NOI18N
         passwordTF.setEchoChar('\u25cf');
 
+        userLabel.setPreferredSize(new java.awt.Dimension(45, 45));
+
+        helloLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        helloLabel.setForeground(new java.awt.Color(0, 102, 102));
+        helloLabel.setText("Hello! Let's get started!");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -113,9 +126,6 @@ public class Login extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(label, javax.swing.GroupLayout.PREFERRED_SIZE, 376, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(98, 98, 98)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(154, 154, 154)
                         .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -125,31 +135,43 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(emailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(30, 30, 30)
-                                .addComponent(donthaveLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addComponent(donthaveLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(signupButton))
                             .addComponent(usernameTF1)
                             .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(passwordTF, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(hiddenButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(1220, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(hiddenButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(98, 98, 98)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(77, 77, 77)
+                        .addComponent(helloLabel)))
+                .addContainerGap(1211, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(label, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 465, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(13, 13, 13)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(helloLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(emailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(usernameTF1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(userLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(usernameTF1))
                 .addGap(27, 27, 27)
                 .addComponent(passwordLabel)
                 .addGap(21, 21, 21)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(passwordTF, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(hiddenButton, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(hiddenButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordTF))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(48, 48, 48)
@@ -175,9 +197,9 @@ public class Login extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
     private boolean check = false;
-    private void hiddenButtonMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_hiddenButtonMousePressed
+    private void hiddenButtonMousePressed(java.awt.event.MouseEvent evt) {                                          
         if (!check) {
             passwordTF.setEchoChar((char) 0);
             ImageIcon icon2 = new ImageIcon("PJ305_1//src//Images//show.png");
@@ -195,13 +217,13 @@ public class Login extends javax.swing.JFrame {
             ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
             hiddenButton.setIcon(scaledIcon1);
         }
-    }//GEN-LAST:event_hiddenButtonMousePressed
+    }                                         
 
-    private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupButtonActionPerformed
+    private void signupButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
         Register register = new Register();
         this.setVisible(false);
         register.setVisible(true);
-    }//GEN-LAST:event_signupButtonActionPerformed
+    }                                            
 
     /**
      * @param args the command line arguments
@@ -238,9 +260,10 @@ public class Login extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JLabel donthaveLabel;
     private javax.swing.JLabel emailLabel;
+    private javax.swing.JLabel helloLabel;
     private javax.swing.JLabel hiddenButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel2;
@@ -249,6 +272,7 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel passwordLabel;
     private javax.swing.JPasswordField passwordTF;
     private javax.swing.JButton signupButton;
+    private javax.swing.JLabel userLabel;
     private javax.swing.JTextField usernameTF1;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
