@@ -1,18 +1,17 @@
-package model;
+package PJ305.src.model;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 public class Bus {
     private int busNumber;
     private List<Bus> adjacentBusStop;
     private HashMap<Integer, String[]> departureTimeOfEachRoute;
 
-    public Bus(int busNumber, List<Bus> adjacentBusStop, HashMap<Integer, String[]> departureTimeOfEachRoute) {
+    public Bus(int busNumber) {
         this.busNumber = busNumber;
-        this.adjacentBusStop = adjacentBusStop;
-        this.departureTimeOfEachRoute = departureTimeOfEachRoute;
+        this.adjacentBusStop = new ArrayList<>();
+        this.departureTimeOfEachRoute = new HashMap<>();
     }
 
     public int getBusNumber() {

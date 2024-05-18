@@ -1,11 +1,14 @@
-package model;
+package PJ305.src.model;
+
+import java.io.*;
+import java.util.*;
 
 public class StudentAccount {
     private String name;
     private String username;
     private String password;
     private double expense = 0;
-    private String gender = "";
+    private String gender = "N/A";
 
     public StudentAccount(String name, String username, String password) {
         this.name = name;
