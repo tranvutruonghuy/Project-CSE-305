@@ -15,22 +15,16 @@ public class Register extends javax.swing.JFrame {
     public Register() {
         initComponents();
         this.setLocationRelativeTo(null);
-        ScaleImage();
+        initialScaleImage();
     }
     
-    public void ScaleImage() {
+    public void initialScaleImage() {
         ImageIcon icon = new ImageIcon("PJ305_1//src//Images//Bus1.jpg");
         Image img = icon.getImage();
         Image imgScale = img.getScaledInstance(imageBus.getWidth(), imageBus.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         imageBus.setIcon(scaledIcon);
-        //
-//        ImageIcon icon1 = new ImageIcon("PJ305_1//src//Images//hide.png");
-//        Image img1 = icon1.getImage();
-//        Image imgScale1 = img1.getScaledInstance(hiddenButton.getWidth(), hiddenButton.getHeight(), Image.SCALE_SMOOTH);
-//        ImageIcon scaledIcon1 = new ImageIcon(imgScale1);
-//        hiddenButton.setIcon(scaledIcon1);
-        // 
+
 
     }
 
@@ -147,7 +141,7 @@ public class Register extends javax.swing.JFrame {
 
     private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
         if (firstNameTF2.getText().length() == 0 ||userNameTF.getText().length() == 0 || passwordTF1.getText().length() == 0 || confirmPassTF.getText().length() == 0){
-            JOptionPane.showMessageDialog(rootPane, "NO");
+            JOptionPane.showMessageDialog(rootPane, "Please enter full information!", "Can't create account!", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_registerButtonActionPerformed
 
